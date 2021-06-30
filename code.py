@@ -107,13 +107,13 @@ class Growing_Cultures:
                 self.stable = True
                 unlivable_cells, populated_cells, livable_cells = self.count_Cells()
                 print(f"""
-How many hours (iterations) does it take to stabilize the cultures? {self.iteration}
+Number of hours (iterations) it takes to stabilize the cultures: {self.iteration}
 
-How many cell locations are unlivable in the grid? {unlivable_cells}
+Number of unlivable cell locations in the grid: {unlivable_cells}
 
-How many cell locations are occupied with cultures on the final day (when it stabilizes)? {populated_cells}
+Number of cell locations thatare occupied with cultures on the final day (when it stabilizes): {populated_cells}
 
-What is the ratio of spaces upon which the culture has taken hold to total Livable spaces on the final day as a percentage? {round((populated_cells/livable_cells)*100, 2)}%
+The ratio of spaces upon which the culture has taken hold to total Livable spaces on the final day as a percentage: {round((populated_cells/livable_cells)*100, 2)}%
 """)
           
 
