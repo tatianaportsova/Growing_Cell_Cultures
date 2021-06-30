@@ -52,28 +52,29 @@ class Growing_Cultures:
     def iterations(self):
 
         # An Inner function that returns a count of populated neighbour cells
-        def get_Neighbours(x, y):
-            populated = 0
-
-            if 0 < x < len(self.grid) - 1:
+        def get_Neighbours(index_row, index_cell):
+            
+            if 0 < index_row < len(self.grid) - 1:
                 x_loc = (0, -1, 1)
             elif x > 0:
                 x_loc = (0, -1)
             else:
                 x_loc = (0, 1)
 
-            if 0 < y < len(self.grid[0]) - 1:
+            if 0 < index_cell < len(self.grid[0]) - 1:
                 y_loc = (0, -1, 1)
             elif y > 0:
                 y_loc = (0, -1)
             else:
                 y_loc = (0, 1)
-
-            for a in x_loc:
-                for b in y_loc:
-                    if a == b == 0: 
+                
+            # Iterate for each of the cell's neigbours and count how many of them are populated
+            populated = 0
+            for x in x_loc:
+                for y in y_loc:
+                    if x == y == 0: 
                         continue
-                    elif self.grid[x + a][y + b] == "#":
+                    elif self.grid[index_row + x][index_cell + y] == "#":
                         populated += 1
 
             return populated
