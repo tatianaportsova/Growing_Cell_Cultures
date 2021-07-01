@@ -56,14 +56,14 @@ class Growing_Cultures:
             
             if 0 < index_row < len(self.grid) - 1:
                 x_loc = (0, -1, 1)
-            elif x > 0:
+            elif index_row > 0:
                 x_loc = (0, -1)
             else:
                 x_loc = (0, 1)
 
             if 0 < index_cell < len(self.grid[0]) - 1:
                 y_loc = (0, -1, 1)
-            elif y > 0:
+            elif index_cell > 0:
                 y_loc = (0, -1)
             else:
                 y_loc = (0, 1)
