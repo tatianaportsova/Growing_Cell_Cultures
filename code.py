@@ -112,7 +112,7 @@ Number of hours (iterations) it takes to stabilize the cultures: {self.iteration
 
 Number of unlivable cell locations in the grid: {unlivable_cells}
 
-Number of cell locations thatare occupied with cultures on the final day (when it stabilizes): {populated_cells}
+Number of cell locations that are occupied with cultures on the final day (when it stabilizes): {populated_cells}
 
 The ratio of spaces upon which the culture has taken hold to total Livable spaces on the final day as a percentage: {round((populated_cells/livable_cells)*100, 2)}%
 """)
